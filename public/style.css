@@ -1,0 +1,21 @@
+/* 記事全体 */
+#reports article {
+  background: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* ボタン */
+#reports button {
+  background: #0d6efd;
+  color: #fff;
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#reports button:hover {
+  background: #0b5ed7;
+}
