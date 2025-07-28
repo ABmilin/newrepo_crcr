@@ -1,0 +1,71 @@
+/* 記事全体 */
+#reports article {
+  background: #323287;              /* 柔らかいライトグレー */
+  color: #222;                      /* 濃いグレーで見やすく */
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* ふんわり影 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#reports article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+#reports h3 {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* 本文 */
+#reports p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 要約ラベル */
+#reports strong {
+  color: #0d6efd;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* 日付 */
+#reports small {
+  color: #555;
+}
+
+/* ボタン */
+#reports button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* 編集ボタン（青） */
+#reports button:first-of-type {
+  background: #0d6efd;
+  color: #fff;
+}
+#reports button:first-of-type:hover {
+  background: #0b5ed7;
+}
+
+/* 削除ボタン（赤） */
+#reports button:last-of-type {
+  background: #dc3545;
+  color: #fff;
+}
+#reports button:last-of-type:hover {
+  background: #bb2d3b;
+}
