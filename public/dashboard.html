@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ダッシュボード - AIサポート</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul><li><strong>AIサポート</strong></li></ul>
+    <ul>
+      <li><a href="/">問い合わせ管理</a></li>
+      <li><a href="/dashboard.html" role="button">ダッシュボード</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>ダッシュボード</h2>
+    <section>
+      <h3>全体サマリー</h3>
+      <p>総件数: <span id="totalCount">0</span></p>
+    </section>
+
+    <section>
+      <h3>ステータス別件数</h3>
+      <canvas id="statusChart"></canvas>
+    </section>
+
+    <section>
+      <h3>緊急度別件数</h3>
+      <canvas id="urgencyChart"></canvas>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
