@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+  <!-- 日本語ロケール -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/ja.js"></script>
 </head>
 <body>
   <nav class="container-fluid">
@@ -20,6 +26,8 @@
   <main class="container">
     <h2>ダッシュボード</h2>
     <section>
+    <h3>タスクカレンダー</h3>
+    <div id="calendar"></div>
   <h3>フィルター</h3>
   <form id="filterForm">
   <label>
