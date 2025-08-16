@@ -88,13 +88,6 @@ node server.js
 └── .gitignore
 
 
-⸻
-
-📷 スクリーンショット（任意）
-
-ダッシュボード、投稿フォーム、コメント機能などのスクリーンショットをここに追加してください。
-
-⸻
 
 📚 使用ライブラリ
 	•	Supabase
@@ -123,18 +116,8 @@ of this software and associated documentation files...
 ⸻
 
 🔗 開発者情報（任意）
-	•	開発者: あなたの名前
-	•	GitHub: https://github.com/your-username
-	•	所属: ○○大学 ○○学部
+	•	開発者: 一條蒼斗
+	•	GitHub: https://github.com/ABmilin/newrepo_crcr/tree/main<img width="442" height="57" alt="image" src="https://github.com/user-attachments/assets/87a64355-c128-4b17-aee0-fb632747cc0f" />
 
----
+	•	所属: 開志専門職大学 情報学部
 
-このテンプレートを貼る前に：
-
-- `[Your Name]` や `your-username` を自分の情報に置き換えてください  
-- スクリーンショットを `.png` や `.jpeg` で `img` タグ or Markdown記法で追加可能です  
-- `.gitignore` に `.env` を追加するのもお忘れなく！
-
----
-
-必要であれば `.gitignore` や `.env.example` も生成します。必要ですか？
