@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ダッシュボード - AIサポート</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul><li><strong>AIサポート</strong></li></ul>
+    <ul>
+      <li><a href="/">問い合わせ管理</a></li>
+      <li><a href="/dashboard.html" role="button">ダッシュボード</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>ダッシュボード</h2>
+    <section>
+      <h3>期限カレンダー</h3>
+      <div id="calendar"></div>
+    </section>
+    <section>
+  <h3>フィルター</h3>
+  <form id="filterForm">
+  <label>
+    期間:
+    <select name="period">
+      <option value="">全期間</option>
+      <option value="week">直近1週間</option>
+      <option value="month">直近1ヶ月</option>
+    </select>
+  </label>
+  <label>
+    ステータス:
+    <select name="status">
+      <option value="">全て</option>
+      <option value="new">未対応</option>
+      <option value="in_progress">対応中</option>
+      <option value="resolved">完了</option>
+    </select>
+  </label>
+  <!-- ✅ 追加: 担当者 -->
+  <label>
+    担当者:
+    <select name="assignee" id="assigneeFilter">
+      <option value="">全て</option>
+      <!-- ここにJSで選択肢を追加 -->
+    </select>
+  </label>
+
+  <label>
+    指定の期限:
+    <input type="date" name="due_date">
+  </label>
+
+  <button type="submit" id="applyFilterBtn">適用</button>
+</form>
+</section>
+
+    <section>
+      <h3>全体サマリー</h3>
+      <p>総件数: <span id="totalCount">0</span></p>
+    </section>
+
+    <section>
+      <h3>ステータス別件数</h3>
+      <canvas id="statusChart"></canvas>
+    </section>
+
+    <section>
+      <h3>緊急度別件数</h3>
+      <canvas id="urgencyChart"></canvas>
+    </section>
+  </main>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
