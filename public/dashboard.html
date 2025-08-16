@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/ja.js"></script>
-</head>
+  <!-- ✅ FullCalendar CSS はそのままでOK -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+
+<!-- ❌ UMD形式のJSは削除 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/ja.js"></script> -->
+
+<!-- ✅ 代わりに ESM形式で FullCalendar をグローバル登録 -->
+<script type="module">
+  import { Calendar } from 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js';
+  import jaLocale from 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/ja.global.min.js';
+  window.FullCalendar = { Calendar, jaLocale };
+</script>
+ 
 <body>
   <nav class="container-fluid">
     <ul><li><strong>AIサポート</strong></li></ul>
