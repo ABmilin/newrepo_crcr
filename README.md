@@ -117,7 +117,7 @@ of this software and associated documentation files...
 
 🔗 開発者情報（任意）
 	•	開発者: 一條蒼斗
-	•	GitHub: https://github.com/ABmilin/newrepo_crcr/tree/main<img width="442" height="57" alt="image" src="https://github.com/user-attachments/assets/87a64355-c128-4b17-aee0-fb632747cc0f" />
+	•	GitHub: https://github.com/ABmilin/newrepo_crcr
 
 	•	所属: 開志専門職大学 情報学部
 
