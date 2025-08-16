@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIカスタマーサポートアプリ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul><li><strong>AIサポート</strong></li></ul>
+    <ul>
+      
+      <li><a href="/dashboard.html" role="button">ダッシュボード</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>相談を投稿</h2>
+    <form id="reportForm">
+      <input type="text" id="title" placeholder="タイトル" required>
+      <input type="text" id="assignee" placeholder="担当者名" required>
+      <input type="date" id="due_date" placeholder="期限">
+      <textarea id="content" placeholder="本文" required></textarea>
+      <button type="submit">送信</button>
+    </form>
+
+    <h2>相談</h2>
+    <div id="reports"></div>
+    <div id="commentModal">
+  <h3>コメントを追加</h3>
+  <textarea id="commentContent" placeholder="コメントを入力..."></textarea>
+  <button id="submitCommentBtn">送信</button>
+  <button id="closeModalBtn">閉じる</button>
+</div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
