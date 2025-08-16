@@ -1,3 +1,4 @@
+import { Calendar } from "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/+esm";
 let statusChartInstance;
 let urgencyChartInstance;
 let calendar;
@@ -107,12 +108,12 @@ function renderCalendar(reports) {
       allDay: true
     }));
 
-  calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "dayGridMonth",
-    locale: "ja",
-    height: 500,
-    events
-  });
+  calendar = new Calendar(calendarEl, {
+  initialView: "dayGridMonth",
+  locale: "ja",
+  height: 500,
+  events
+});
 
   calendar.render();
 }
