@@ -110,7 +110,7 @@ function renderCalendar(reports) {
 
   calendar = new Calendar(calendarEl, {
   initialView: "dayGridMonth",
-  locale: "ja",
+  locale: jaLocale,
   height: 500,
   events
 });
