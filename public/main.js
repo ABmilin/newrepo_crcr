@@ -240,6 +240,15 @@ async function updateDueDate(id, due_date) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ due_date })
   });
+  // ✅ カレンダーのイベントも更新する
+  if (window.calendar) {
+    const event = window.calendar.getEventById(id);
+    if (event) {
+      event.setStart(due_date); // イベントの日付を即時更新
+    } else {
+      loadCalendar?.(); // イベントが見つからない場合はカレンダーを再読み込み
+    }
+  }
 }
 
 async function deleteComment(commentId, reportId) {
