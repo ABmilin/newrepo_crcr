@@ -88,40 +88,5 @@ async function populateAssigneeOptions() {
   });
 }
 
-function renderCalendar(reports) {
-  const calendarEl = document.getElementById("calendar");
-  if (!calendarEl) return;
-
-  const events = reports
-    .filter(r => r.due_date)
-    .map(r => ({
-      id: r.id,
-      title: `${r.title}（${r.assignee || "未定"}）`,
-      start: r.due_date.split("T")[0],
-      allDay: true
-    }));
-
-  const calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "dayGridMonth",
-    locale: "ja",
-    height: 500,
-    events
-  });
-
-  calendar.render();
-
-  // グローバルに保存して後で操作できるようにする（例：更新反映）
-  window.calendar = calendar;
-}
-
-async function loadCalendar() {
-  const res = await fetch("/api/reports");
-  const reports = await res.json();
-  renderCalendar(reports);
-}
-
 // 初期表示
-populateAssigneeOptions().then(() => {
-  loadDashboard();     // サマリー・グラフ表示
-  loadCalendar();      // ✅ カレンダーを表示！
-});
+populateAssigneeOptions().then(loadDashboard);
